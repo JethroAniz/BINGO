@@ -1,39 +1,50 @@
-console.log("Hello World!");
+console.log("hello pogi bili na ng bingo");
 
-generateNumber(15);
+//generateNumber(75);
 
+let isB = false,
+    isI = false,
+    isN = false,
+    isG = false,
+    isO = false;
 
-function generateNumber (max) {
-    //addition = +
-    //substraction = -
-    //multiplication = *
-    //division = /
-    //remainder = %
+function generateNumber(max) {
+    //add = +
+    //sub = -
+    //mul = *
+    //div = /
+    //remain = %
+    let randomNumber = Math.floor(Math.random() * max) + 1;
 
+    //GT >, GTE > =, LT <, LTE < =, EQ == NEQ ! =, AND &&, OR ||
+    if (randomNumber <= 15) {
+        isB = true;
+        console.log(`The number is in B.`)
+    } 
+    else if (randomNumber >= 16 && randomNumber <= 30) {
+        isI = true;
+        console.log(`The number is in I.`)
+    }
+    else if (randomNumber >= 31 && randomNumber <= 45) {
+        isN = true;
+        console.log(`The number is in N.`)
+    }
+    else if (randomNumber >= 46 && randomNumber <= 60) {
+        isG = true;
+        console.log(`The number is in G.`)
+    }
+    else if (randomNumber >= 61 && randomNumber <= 75) {
+        isO = true;
+        console.log(`The number is in O.`)
+    }
+    else {
+        console.log(`The number is invalismhdbfnjasbdkasdg!!!!!!!!!!!`)
+    }
 
+    if (isB == true && isI == true && isN == true && isG == true && isO == true) {
+        console.log("Bingo!!!!");
+    }
 
-    let randomNumber = Math.floor(Math.random()* max) + 1;
     
-    // if......else if ...else
-    //GT >, GTE > = LTE <=, EQ ==, AND&&, OR ||
-    if (randomNumber <= 15){
-        console.log('the Number is in B.');
-    }
-    else if(randomNumber >= 16 && randomNumber <= 30){
-        console.log('the number is in I');
-    }
-    else if(randomNumber >= 31 && randomNumber <= 45){
-        console.log('the number is in N');
-    }
-    else if(randomNumber >= 46 && randomNumber <= 60){
-        console.log('the number is in G');
-    }
-    else if(randomNumber >= 61 && randomNumber <= 75){
-        console.log('the number is in O');
-    }
-    else{
-        console.log('the number is invalid');
-    }
-
     return console.log(randomNumber);
 }
